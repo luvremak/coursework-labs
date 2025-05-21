@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memoization with Eviction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Memoization with Eviction Strategies</h1>
+
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" placeholder="e.g. 5" />
+
+    <label for="strategy">Eviction Strategy:</label>
+    <select id="strategy">
+      <option value="none">None (unlimited)</option>
+      <option value="lru">Least Recently Used (LRU)</option>
+      <option value="lfu">Least Frequently Used (LFU)</option>
+      <option value="ttl">Time-based Expiry (TTL)</option>
+    </select>
+
+    <label for="maxSize">Max Cache Size:</label>
+    <input type="number" id="maxSize" value="5" min="1" />
+
+    <label for="ttl">TTL (ms, only for Time-based):</label>
+    <input type="number" id="ttl" value="5000" min="100" />
+
+    <button id="runBtn">Run Memoized Function</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
